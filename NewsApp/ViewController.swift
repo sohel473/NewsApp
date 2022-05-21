@@ -13,8 +13,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         title = "News"
         view.backgroundColor = .systemBackground
+        
+        fetchData()
     }
 
+    func fetchData() {
+        APICaller.shared.getNews()
+    }
 
 }
 

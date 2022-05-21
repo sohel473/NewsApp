@@ -13,6 +13,8 @@
 		7DD8A1392837D95B00885F6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DD8A1372837D95B00885F6C /* Main.storyboard */; };
 		7DD8A13B2837D95C00885F6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DD8A13A2837D95C00885F6C /* Assets.xcassets */; };
 		7DD8A13E2837D95C00885F6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DD8A13C2837D95C00885F6C /* LaunchScreen.storyboard */; };
+		7DE17ABA283965060099229C /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE17AB9283965060099229C /* News.swift */; };
+		7DED221E28395E5300C532FA /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DED221D28395E5300C532FA /* APICaller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		7DD8A13A2837D95C00885F6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DD8A13D2837D95C00885F6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DD8A13F2837D95C00885F6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DE17AB9283965060099229C /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		7DED221D28395E5300C532FA /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			children = (
 				7DD8A1312837D95B00885F6C /* AppDelegate.swift */,
 				7DD8A1332837D95B00885F6C /* SceneDelegate.swift */,
+				7DE17AB9283965060099229C /* News.swift */,
+				7DED221D28395E5300C532FA /* APICaller.swift */,
 				7DD8A1352837D95B00885F6C /* ViewController.swift */,
 				7DD8A1372837D95B00885F6C /* Main.storyboard */,
 				7DD8A13A2837D95C00885F6C /* Assets.xcassets */,
@@ -141,6 +147,8 @@
 				7DD8A1362837D95B00885F6C /* ViewController.swift in Sources */,
 				7DD8A1322837D95B00885F6C /* AppDelegate.swift in Sources */,
 				7DD8A1342837D95B00885F6C /* SceneDelegate.swift in Sources */,
+				7DE17ABA283965060099229C /* News.swift in Sources */,
+				7DED221E28395E5300C532FA /* APICaller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
