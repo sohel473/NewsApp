@@ -18,6 +18,8 @@ class ViewController: UIViewController {
         table.register(NewsTableViewCell.self, forCellReuseIdentifier: NewsTableViewCell.indentifier)
         return table
     }()
+    
+    private let searchVC = UISearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,7 @@ class ViewController: UIViewController {
         
         view.addSubview(newsTableView)
         fetchData()
+        createSearchBar()
     }
 
     func fetchData() {
@@ -36,6 +39,7 @@ class ViewController: UIViewController {
             guard let self = self else { return }
             switch result{
             case .success(let articles):
+                print(articles.count)
                 self.articles = articles
                 self.viewModels = articles.compactMap({ news in
                     NewsViewModel(title: news.title ?? "No Title", subTitle: news.description ?? "No Description yet", imageURL: URL(string: news.urlToImage ?? ""))
@@ -47,6 +51,12 @@ class ViewController: UIViewController {
                 print(error)
             }
         }
+    }
+    
+    func createSearchBar() {
+        navigationItem.searchController = searchVC
+        searchVC.searchBar.delegate = self
+        searchVC.searchBar.placeholder = "Search News"
     }
     
     override func viewDidLayoutSubviews() {
@@ -82,5 +92,31 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         150
+    }
+}
+
+extension ViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let query = searchBar.text, !query.isEmpty else {
+            return
+        }
+        guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return }
+//        print(query)
+        APICaller.shared.searchNews(with: query) { result in
+            switch result {
+            case .success(let articles):
+                print(articles.count)
+                self.articles = articles
+                self.viewModels = articles.compactMap({ news in
+                    NewsViewModel(title: news.title ?? "No Title", subTitle: news.description ?? "No Description yet", imageURL: URL(string: news.urlToImage ?? ""))
+                })
+                DispatchQueue.main.async {
+                    self.newsTableView.reloadData()
+                    self.searchVC.dismiss(animated: true)
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
