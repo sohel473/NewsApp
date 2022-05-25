@@ -18,7 +18,7 @@ class APICaller {
     
     //MARK: - Get News
     
-    func getNews() {
+    func getNews(completion: @escaping(Result<[News], Error>) -> Void) {
         
         let endpoint = "\(baseURL)&apiKey=\(API_KEY)"
 //        print(endpoint)
@@ -38,10 +38,11 @@ class APICaller {
             do {
 //                let results = try JSONSerialization.jsonObject(with: data)
                 let results = try JSONDecoder().decode(NewsResponse.self, from: data)
-                print(results)
+                print(results.articles)
+                completion(.success(results.articles))
             } catch {
-                print(error)
-//                completion(.failure(error))
+//                print(error)
+                completion(.failure(error))
             }
         }
         task.resume()
