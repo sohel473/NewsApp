@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     }()
     
     private let searchVC = UISearchController(searchResultsController: nil)
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +29,22 @@ class ViewController: UIViewController {
         
         newsTableView.delegate = self
         newsTableView.dataSource = self
+        newsTableView.refreshControl = UIRefreshControl()
+        newsTableView.refreshControl?.addTarget(self, action: #selector(pullNewsData), for: .valueChanged)
         
         view.addSubview(newsTableView)
         fetchData()
         createSearchBar()
     }
 
+    @objc func pullNewsData() {
+        DispatchQueue.main.asyncAfter(deadline: .now()+2) { [weak self] in
+            guard let self = self else { return }
+            self.fetchData()
+            self.newsTableView.refreshControl?.endRefreshing()
+        }
+    }
+    
     func fetchData() {
         APICaller.shared.getNews { [weak self] result in
             guard let self = self else { return }
