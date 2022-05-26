@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7DD8A12E2837D95B00885F6C /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DD8A12E2837D95B00885F6C /* News Coo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "News Coo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DD8A1312837D95B00885F6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DD8A1332837D95B00885F6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7DD8A1352837D95B00885F6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		7DD8A12F2837D95B00885F6C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7DD8A12E2837D95B00885F6C /* NewsApp.app */,
+				7DD8A12E2837D95B00885F6C /* News Coo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,9 +130,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7DD8A12D2837D95B00885F6C /* NewsApp */ = {
+		7DD8A12D2837D95B00885F6C /* News Coo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7DD8A1422837D95C00885F6C /* Build configuration list for PBXNativeTarget "NewsApp" */;
+			buildConfigurationList = 7DD8A1422837D95C00885F6C /* Build configuration list for PBXNativeTarget "News Coo" */;
 			buildPhases = (
 				7DD8A12A2837D95B00885F6C /* Sources */,
 				7DD8A12B2837D95B00885F6C /* Frameworks */,
@@ -142,9 +142,9 @@
 			);
 			dependencies = (
 			);
-			name = NewsApp;
+			name = "News Coo";
 			productName = NewsApp;
-			productReference = 7DD8A12E2837D95B00885F6C /* NewsApp.app */;
+			productReference = 7DD8A12E2837D95B00885F6C /* News Coo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -162,7 +162,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7DD8A1292837D95B00885F6C /* Build configuration list for PBXProject "NewsApp" */;
+			buildConfigurationList = 7DD8A1292837D95B00885F6C /* Build configuration list for PBXProject "News Coo" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -175,7 +175,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7DD8A12D2837D95B00885F6C /* NewsApp */,
+				7DD8A12D2837D95B00885F6C /* News Coo */,
 			);
 		};
 /* End PBXProject section */
@@ -403,7 +403,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7DD8A1292837D95B00885F6C /* Build configuration list for PBXProject "NewsApp" */ = {
+		7DD8A1292837D95B00885F6C /* Build configuration list for PBXProject "News Coo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7DD8A1402837D95C00885F6C /* Debug */,
@@ -412,7 +412,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7DD8A1422837D95C00885F6C /* Build configuration list for PBXNativeTarget "NewsApp" */ = {
+		7DD8A1422837D95C00885F6C /* Build configuration list for PBXNativeTarget "News Coo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7DD8A1432837D95C00885F6C /* Debug */,
